@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+
+
+{% block content %}
+
+ <h1>Are you sure you want to delete {{todo.title}} ?</h1>
+ <form action="" method="post">
+    {% csrf_token %}
+    
+    <button><input type="submit" value="yes"></button>
+ </form>
+   <button ><a href="{{request.META.HTTP_REFERER}}">No </a></button>
+
+
+{% endblock content %}

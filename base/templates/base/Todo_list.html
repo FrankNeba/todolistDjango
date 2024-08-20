@@ -1,0 +1,21 @@
+{% extends 'base/main.html'%}
+
+{% block content %}
+    <div>
+        <h1>All Todos</h1>
+        
+            {% for todo in todos %}
+                <a href="{% url  'details' todo.id %}">
+                    <div class="todo">
+                        <h2>{{todo.title}}</h2>
+                        <p>{{todo.description}}</p>
+                        <!-- <img src="{{todo.image.url}}" alt="todo image"> -->
+                    </div>
+                </a>
+            {% endfor %}
+        
+        
+    </div>
+
+{% endblock content %}
+

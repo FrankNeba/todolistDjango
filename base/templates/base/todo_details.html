@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+
+
+{% block content %}
+
+<div class="todo">
+    <h2>{{todo.title}}</h2>
+    <p>{{todo.description}}</p>
+    <!-- <img src="{{todo.image.url}}" alt="todo image"> -->
+    <h6><a href="{% url  'update' todo.id %}">edit</a></h6>
+    <h6><a href="{% url 'delete' todo.id %}">delete</a></h6>
+    
+</div>
+
+
+{% endblock content%}

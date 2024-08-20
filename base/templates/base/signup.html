@@ -1,0 +1,32 @@
+{%  extends 'base/main.html' %}
+
+
+{% block content %}
+
+<div>
+    <form action="" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="username">Username</label>
+    {% comment %} <input type="text" id="username" name="username"> {% endcomment %}
+        {{form.username}}
+
+    <label for="password1">Password</label>
+    {% comment %} <input type="password" id="password1"> {% endcomment %}
+    {{form.password1}}
+
+    <label for="password2">confirm Password</label>
+    {% comment %} <input type="password" id="password2"> {% endcomment %}
+    {{form.password2}}
+
+
+    </div>
+    <button type="submit">signup</button>
+</form>
+
+<p>Already have an account? <a href="{% url 'login' %}">login</a> </p>
+</div>
+
+ 
+
+{% endblock content %}
